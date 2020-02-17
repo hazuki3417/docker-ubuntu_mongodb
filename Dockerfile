@@ -10,7 +10,7 @@
 # docker exec -it mongodb_v4.x /bin/bash
 
 # ベースイメージを指定
-FROM hazuki3417/ubuntu18.04:latest
+FROM hazuki3417/ubuntu:latest
 # 制作者情報を指定
 LABEL maintainer="hazuki3417 <hazuki3417@gmail.com>"
 
