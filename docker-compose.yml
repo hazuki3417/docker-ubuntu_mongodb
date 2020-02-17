@@ -1,0 +1,27 @@
+version: "3.0"
+
+services:
+  mongodb:
+    build: #buildしたときのimage名はimageに指定した名前になる
+      context: ./
+      dockerfile: Dockerfile
+    hostname: mongodb
+    image: hazuki3417/mongodb:latest
+    container_name: mongodb
+    environment:
+      TZ: Asia/Tokyo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/var/lib/mongodb
+    networks: 
+      - common_link
+    tty: true
+
+networks: 
+  common_link:
+    external: true
+
+volumes:
+  mongodb_data:
+
