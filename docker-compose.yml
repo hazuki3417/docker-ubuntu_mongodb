@@ -1,13 +1,13 @@
 version: "3.0"
 
 services:
-  mongodb:
+  ubuntu_mongodb:
     build: #buildしたときのimage名はimageに指定した名前になる
       context: ./
       dockerfile: Dockerfile
-    hostname: mongodb
-    image: hazuki3417/mongodb:latest
-    container_name: mongodb
+    hostname: ubuntu_mongodb
+    image: hazuki3417/ubuntu_mongodb:latest
+    container_name: ubuntu_mongodb
     environment:
       TZ: Asia/Tokyo
     ports:
